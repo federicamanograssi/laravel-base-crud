@@ -3,5 +3,5 @@
 @section('pageTitle','Dresses')
  
 @section('content')
-    @dd('$dresses')
+   @dd('$dresses')
 @endsection
