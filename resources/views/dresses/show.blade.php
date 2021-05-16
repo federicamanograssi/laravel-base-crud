@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
+@section('pageTitle','Dettagli')
 @section('content')
     <h1>{{$dress->name}}</h1>
-    <p>{{$dress->price}}</p>
-    <p>{{$dress->size}}</p>
+    <p>Euro {{$dress->price}}</p>
+    <p>Taglia : {{$dress->size}}</p>
 @endsection

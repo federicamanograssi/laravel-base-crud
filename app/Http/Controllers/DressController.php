@@ -29,7 +29,7 @@ class DressController extends Controller
      */
     public function create()
     {
-        //
+        return view('dresses.create');
     }
 
     /**
