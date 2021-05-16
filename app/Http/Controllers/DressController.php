@@ -43,11 +43,14 @@ class DressController extends Controller
         $data= $request->all();
         $new_dress = new Dress();
 
-        $new_dress->type= $data['type'];
-        $new_dress->name= $data['name'];
-        $new_dress->type= $data['type'];
-        $new_dress->size= $data['size'];
-        $new_dress->price= $data['price'];
+        // o scrivi tutti i campi a mano così
+        // $new_dress->type= $data['type'];
+        // $new_dress->name= $data['name'];
+        // $new_dress->size= $data['size'];
+        // $new_dress->price= $data['price'];
+
+        // oppure modifichi il DRESS model aggiungendo i campi da riempire e poi fai questo metodo
+        $new_dress->fill($data);
 
         $new_dress->save();
 
