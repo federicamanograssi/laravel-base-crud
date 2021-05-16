@@ -40,7 +40,18 @@ class DressController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data= $request->all();
+        $new_dress = new Dress();
+
+        $new_dress->type= $data['type'];
+        $new_dress->name= $data['name'];
+        $new_dress->type= $data['type'];
+        $new_dress->size= $data['size'];
+        $new_dress->price= $data['price'];
+
+        $new_dress->save();
+
+        return redirect()->route('dresses.index');
     }
 
     /**

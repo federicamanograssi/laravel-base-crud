@@ -10,13 +10,21 @@
 
         <div class="form-group">
             <label for="type">Type :</label>
-            <input type="text" class="form-control" id="text">
+            <input type="text" class="form-control" name="type" id="text">
         </div>
         <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" class="form-control" id="name">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" name="name" id="name">
         </div>
-        <button type="submit" class="btn btn-default">Submit</button>
+        <div class="form-group">
+            <label for="size">Size:</label>
+            <input type="text" class="form-control" name="size" id="size">
+        </div>
+        <div class="form-group">
+            <label for="price">Price:</label>
+            <input type="number" class="form-control" name="price" id="price">
+        </div>
+        <button type="submit" class="btn btn-default" href="">Submit</button>
     </form>
     
 @endsection

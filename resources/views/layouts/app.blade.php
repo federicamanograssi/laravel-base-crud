@@ -9,6 +9,7 @@
 
     {{-- per css personalizzato --}}
     @yield('css')
+    <link rel="stylesheet" href="{{asset('css/app.css')}}">
 
     <title>@yield('pageTitle') | My Shop</title>
 </head>
