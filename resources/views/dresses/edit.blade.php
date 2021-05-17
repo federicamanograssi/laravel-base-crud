@@ -4,7 +4,7 @@
 @section('content')
     <h1>Modifica vestito</h1>
 
-    <form action="#" method="POST">
+    <form action="{{route('dresses.update',$dress->id)}}" method="POST">
         @csrf
         @method('PUT')
 
