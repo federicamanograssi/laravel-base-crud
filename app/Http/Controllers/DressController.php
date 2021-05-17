@@ -41,6 +41,14 @@ class DressController extends Controller
     public function store(Request $request)
     {
         $data= $request->all();
+
+        $request->validate([
+            'type'=>'required|max:255',
+            'name'=>'required|unique:dresses|max:255',
+            'price'=>'required|numeric',
+            'size'=>'required|max:4'
+        ]);
+
         $new_dress = new Dress();
 
         // o scrivi tutti i campi a mano così
