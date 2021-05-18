@@ -4,6 +4,7 @@
 @section('content')
     <h1>Inserisci nuovo vestito</h1>
 
+    {{-- GESTIONE ERRORI---------- --}}
     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>

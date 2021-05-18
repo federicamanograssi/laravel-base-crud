@@ -6,6 +6,13 @@
 
 <h1>Prodotti</h1>
 
+{{-- SESSIONE ELIMINA-------- --}}
+@if (session('status'))
+<div class="alert alert-success">
+    {{session('status')}}
+</div>
+@endif
+
 <a href="{{route('dresses.create')}}" class="btn btn-primary">Aggiungi nuovo vestito</a>
 
 <table class="table">

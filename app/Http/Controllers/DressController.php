@@ -118,7 +118,7 @@ class DressController extends Controller
     public function destroy(Dress $dress)
     {
         $dress->delete();
-        return redirect()->route('dresses.index');
+        return redirect()->route('dresses.index')->with('status','Elemento Cancellato');
 
     }
 }

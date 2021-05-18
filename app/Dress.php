@@ -10,6 +10,5 @@ class Dress extends Model
     //protected $table='nomedellatabelladeldb"
 
 
-    protected $fillable =['type','name', 'size','price','token'];
-    // perchè mi ha fatto aggiungere token?
+    protected $fillable =['type','name', 'size','price'];
 }
