@@ -21,19 +21,19 @@
 
         <div class="form-group">
             <label for="type">Type :</label>
-            <input type="text" class="form-control" name="type" id="text">
+            <input type="text" class="form-control" name="type" id="text" value={{old('type')}}>
         </div>
         <div class="form-group">
             <label for="name">Name:</label>
-            <input type="text" class="form-control" name="name" id="name">
+            <input type="text" class="form-control" name="name" id="name" value={{old('name')}}>
         </div>
         <div class="form-group">
             <label for="size">Size:</label>
-            <input type="text" class="form-control" name="size" id="size">
+            <input type="text" class="form-control" name="size" id="size" value={{old('size')}}>
         </div>
         <div class="form-group">
             <label for="price">Price:</label>
-            <input type="number" class="form-control" name="price" id="price">
+            <input type="number" class="form-control" name="price" id="price" value={{old('price')}}>
         </div>
         <button type="submit" class="btn btn-default" href="">Submit</button>
     </form>
