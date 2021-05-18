@@ -7,6 +7,18 @@ use App\Dress;
 
 class DressController extends Controller
 {
+    // MIA FUNZIONE PER LA CONVALIDA
+    //protected perche tanto la userò solo qua dentro
+    protected function convalida(Request $request){
+        $request->validate([
+                'type'=>'required|max:255',
+                'name'=>'required|unique:dresses|max:255',
+                'price'=>'required|numeric',
+                'size'=>'required|max:4'
+            ]);
+    }
+
+
     /**
      * Display a listing of the resource.
      *
@@ -42,12 +54,16 @@ class DressController extends Controller
     {
         $data= $request->all();
 
-        $request->validate([
-            'type'=>'required|max:255',
-            'name'=>'required|unique:dresses|max:255',
-            'price'=>'required|numeric',
-            'size'=>'required|max:4'
-        ]);
+        // richiamo funzione convalida con this
+        $this->convalida($request);
+
+        // **tolgo guesto perchè ho creato la funzione a monte, ma la richiamo  **      
+        // $request->validate([
+        //     'type'=>'required|max:255',
+        //     'name'=>'required|unique:dresses|max:255',
+        //     'price'=>'required|numeric',
+        //     'size'=>'required|max:4'
+        // ]);
 
         $new_dress = new Dress();
 
